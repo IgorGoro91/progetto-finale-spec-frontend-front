@@ -1,0 +1,273 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{
+    height: 10vh;
+    padding: 0 30px;
+    background-color: lightgray;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    
+}
+header a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  display: inline-block; 
+}
+
+header a:hover {
+  text-decoration: underline;
+  color: #007bff;
+  transform: scale(1.3);
+}
+
+.header-left{
+   display: flex;
+   gap: 100px;
+   align-items: center;
+}
+
+.logo{
+    width: 100px;
+  
+}
+
+ul{
+  list-style: none;
+}
+
+.search-bar{
+    display: flex;
+    gap: 10px;
+    
+}
+.search-input{
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 300px;
+}
+
+/* Card>>>>>>>>>>>>>>>>>>>> */
+
+.card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  max-width: 300px;
+  position: relative;
+}
+
+.card.selected {
+  border-color: #007bff;
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+}
+
+.card-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+.card h3 {
+  margin: 0 0 8px 0;
+  font-size: 1.2rem;
+}
+
+.card p {
+  margin: 4px 0;
+  font-size: 0.9rem;
+}
+
+.card button {
+  margin-top: 8px;
+  padding: 6px 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.card button:hover {
+  background-color: #0056b3;
+}
+
+.favorite-heart {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 24px;
+  user-select: none;
+}
+
+/* <<<<<<<<<<<<<<<<<<<<<<<<<< */
+
+.container-single {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 0 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #222;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 25px;
+  object-fit: cover;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.detailsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px 30px;
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+}
+
+.detailsGrid > div {
+  background-color: #f7f7f7;
+  padding: 10px 15px;
+  border-radius: 8px;
+  box-shadow: inset 1px 1px 3px rgba(0,0,0,0.05);
+}
+
+button {
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  filter: brightness(0.9);
+}
+
+
+
+/* CardPreferito >>>>>>>>>>>>>>>>>> */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 16px;
+}
+
+.card-preferito {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 12px;
+  max-width: 300px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card-preferito h3 {
+  margin: 0 0 8px 0;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.card-preferito img {
+  width: 100%;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+
+.card-preferito p {
+  margin: 0 0 12px 0;
+  color: #666;
+  font-size: 1rem;
+}
+
+.card-preferito button {
+  padding: 6px 12px;
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.card-preferito button:hover {
+  background-color: #e04343;
+}
+
+/* CardComparatore >>>>>>>>>>>>>>>>>> */
+.comparator-container {
+  padding: 20px;
+}
+
+.cars-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.car-card-wrapper {
+  position: relative;
+  width: 300px;
+}
+
+.btn-toggle {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  color: white;
+}
+
+.btn-add {
+  background-color: #4a90e2;
+}
+
+.btn-remove {
+  background-color: #ff6b6b;
+}
+
+.selected-cars {
+  margin-top: 40px;
+  display: flex;
+  gap: 20px;
+}
+
+.selected-card {
+  width: 300px;
+}
+
+
