@@ -20,7 +20,7 @@ export default function SearchBar() {
   const [search, setSearch] = useState(""); // valore digitato nel campo input
   const [results, setResults] = useState([]); // risultati trovati dalla ricerca
   const [showList, setShowList] = useState(false); // stato che mostra/nasconde la lista dei suggerimenti
-  const navigate = useNavigate(); // hook per la navigazione programmatica
+  const navigate = useNavigate(); // hook per la navigazione 
   const inputRef = useRef(null); // riferimento diretto all'input, per metterlo a fuoco
 
   const debouncedSearch = useDebounce(search, 300); // valore della ricerca ritardato di 300ms
@@ -34,7 +34,7 @@ export default function SearchBar() {
   useEffect(() => {
     if (debouncedSearch.length === 0) {
       setResults([]); // se la stringa è vuota, azzera i risultati
-      setShowList(false); // e nasconde la lista
+      setShowList(false); //  nasconde la lista
       return;
     }
 
@@ -61,6 +61,7 @@ export default function SearchBar() {
       const firstCar = results[0]; // prende la prima auto trovata
       setShowList(false); // chiude la lista
       setSearch(""); // resetta il campo input
+      navigate(`/cars/${firstCar.id}`); // usa React Router per navigare alla pagina della prima auto trovata
     
     } else {
       alert("Nessuna auto trovata"); // messaggio se non ci sono risultati
@@ -87,7 +88,7 @@ export default function SearchBar() {
       <div style={{ display: "flex", gap: "8px" }}>
         <div style={{ position: "relative", flexGrow: 1 }}>
           <input
-            ref={inputRef} // riferimento per mettere il focus
+            ref={inputRef} // usato per accedere al DOM e mettere il focus con inputRef.current.focus()
             type="text"
             value={search} // valore dell’input
             onChange={e => setSearch(e.target.value)} // aggiorna lo stato mentre l’utente scrive

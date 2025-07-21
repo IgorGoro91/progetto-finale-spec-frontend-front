@@ -36,7 +36,7 @@ export default function CarComparator() {
               return data.car;
             } catch (err) {
               console.error(`Errore caricamento dettagli per auto ${car.id}`, err);
-              return car; // se errore ritorno auto base
+              return car; 
             }
           })
         );
