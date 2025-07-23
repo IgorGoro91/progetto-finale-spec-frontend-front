@@ -1,6 +1,6 @@
 import React from "react";
 
-// Questo è un componente chiamato Card, usato per mostrare le informazioni di un'auto
+//  mostrara le informazioni di un'auto
 export default function Card({
   
   id,

@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 
-// Hook personalizzato che restituisce un valore "ritardato", utile per ottimizzare richieste mentre l'utente digita
+// Hook  che restituisce un valore "ritardato", utile per ottimizzare richieste mentre l'utente digita
 function useDebounce(value, delay) {
   const [debouncedValue, setDebouncedValue] = useState(value);
 
